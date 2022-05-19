@@ -9,7 +9,7 @@ class Student(Base):
     __tablename__ = 'student'
 
     id = Column(Integer, primary_key=True)
-    name = Column(String)
+    name = Column(String(50))
 
     def __init__(self, name):
         self.name = name

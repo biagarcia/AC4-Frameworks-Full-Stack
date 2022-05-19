@@ -16,8 +16,8 @@ class Course(Base):
     __tablename__ = 'course'
 
     id = Column(Integer, primary_key=True)
-    title = Column(String)
-    description = Column(String)
+    title = Column(String(50))
+    description = Column(String(100))
     students = relationship("Student", secondary=association_table)
 
     def __init__(self, title, description, students):
